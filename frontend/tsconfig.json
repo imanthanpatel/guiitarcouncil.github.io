@@ -1,0 +1,13 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ],
+  "compilerOptions": {
+    "baseUrl": ".", // This sets the base directory for relative module imports
+    "paths": {
+      "@/*": ["./src/*"] // This creates an alias for the src folder
+    }
+  }
+}

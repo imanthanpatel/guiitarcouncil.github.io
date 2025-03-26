@@ -1,0 +1,1 @@
+# React + TypeScript + Vite + TailwindCSS + TSParticle.js + Django + DRF + MySQL
