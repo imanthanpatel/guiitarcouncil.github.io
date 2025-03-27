@@ -11,6 +11,8 @@ import Scalar from "./components/Scalar";
 import Associations from "./components/Associations";
 import Faqs from "./components/Faqs";
 import About from "./components/About";
+import Contact from "./components/Contact";
+import Funding from "./components/Funding";
 
 const AppContent: React.FC = () => {
   const location = useLocation();
@@ -54,9 +56,7 @@ const AppContent: React.FC = () => {
             <>
               <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
               <div className={`min-h-screen bg-gray-50 transition-all duration-300 ${isOpen ? "pt-[300px]" : "pt-[80px]"} md:pt-[80px]`}>
-                <h1 className="text-3xl text-center pt-20">
-                  Funding Page
-                </h1>
+              <Funding/>
                 <Footer />
               </div>
             </>
@@ -82,9 +82,7 @@ const AppContent: React.FC = () => {
             <>
               <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
               <div className={`min-h-screen bg-gray-50 transition-all duration-300 ${isOpen ? "pt-[300px]" : "pt-[80px]"} md:pt-[80px]`}>
-                <h1 className="text-3xl text-center pt-20">
-                  Contact Page
-                </h1>
+                <Contact/>
                 <Footer />
               </div>
             </>

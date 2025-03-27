@@ -80,7 +80,7 @@ const Navbar: React.FC<NavbarProps> = ({ isOpen, setIsOpen }) => {
             { path: "/", label: "Home" },
             { path: "/about", label: "About" },
             { path: "/funding", label: "Funding" },
-            { path: "/programs", label: "Programs & Events" },
+            { path: "/programs", label: "Workshop & Events" },
             { path: "/contact", label: "Contact" },
             { path: "/login", label: "Login" },
           ].map((item) => (

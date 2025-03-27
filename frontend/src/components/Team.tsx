@@ -802,15 +802,16 @@ const TabbedAboutTeam: React.FC = () => {
     ],
   };
 
+ 
   return (
-    <div className="p-[40px] bg-[#f9f9f9] font-sans text-secondary max-[750px]:p-0">
-      <div className="flex justify-center mb-[30px] flex-wrap gap-2">
+    <div className="p-[40px] bg-[#f9f9f9] font text-secondary max-[750px]:p-[20px] max-[480px]:p-[10px]">
+      <div className="flex justify-center mb-[30px] flex-wrap gap-2 max-[768px]:flex-col max-[768px]:items-center">
         {tabs.map((tab) => (
           <button
             key={tab.id}
-            className={`bg-transparent border-2 border-[#ccc] py-[10px] px-[20px] mx-[10px] cursor-pointer text-[1rem] rounded-[5px] transition-all duration-300 ease-in text ${
+            className={`bg-transparent border-2 border-[#ccc] py-[10px] px-[20px] mx-[10px] cursor-pointer text-[1rem] rounded-[5px] transition-all duration-300 ease-in text-black max-[768px]:mx-0 max-[768px]:w-[80%] max-[768px]:my-2 max-[480px]:py-[8px] max-[480px]:px-[16px] max-[480px]:text-[0.9rem] ${
               activeTab === tab.id
-                ? "bg-primary text-secondary font-bold scale-105 shadow-[0_4px_8px_rgba(0,0,0,0.2)] border-primary"
+                ? "bg-primary text-secondary font scale-105 shadow-[0_4px_8px_rgba(0,0,0,0.2)] border-primary max-[768px]:scale-100"
                 : ""
             } hover:bg-secondary hover:text-black`}
             onClick={() => setActiveTab(tab.id)}
@@ -819,38 +820,55 @@ const TabbedAboutTeam: React.FC = () => {
           </button>
         ))}
       </div>
-
+  
       <div className="text-center">
-        <h2 className="text-[2rem] mb-[15px] text-[#333] max-[768px]:text-[1.5rem]">
+        <h2 className="text-[2rem] mb-[15px] text-[#333] max-[768px]:text-[1.5rem] max-[480px]:text-[1.25rem] max-[480px]:mb-[10px]">
           {tabs.find((tab) => tab.id === activeTab)?.label}
         </h2>
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-[25px] p-[10px]">
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-[35px] p-[10px] max-w-[1200px] mx-auto max-[768px]:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] max-[768px]:gap-[15px] max-[768px]:p-[5px] max-[480px]:grid-cols-[repeat(auto-fit,minmax(200px,1fr))] max-[480px]:gap-[10px]">
           {teamData[activeTab]?.map((member, index) => (
             <div
               key={index}
-              className="bg-secondary rounded-[8px] shadow-[0_6px_12px_rgba(0,0,0,0.15)] text-center transition-all duration-300 ease-in hover:-translate-y-[5px] hover:bg-gray-50 p-5"
+              className="group bg-secondary rounded-[8px] shadow-[0_6px_12px_rgba(0,0,0,0.15)] text-center transition-all duration-300 ease-in hover:-translate-y-[5px] hover:bg-gray-50 p-5 max-[768px]:p-4 max-[480px]:p-3"
             >
-              <div className="relative flex justify-center items-center w-[250px] h-[250px] mx-auto border-4 border-[#ccc] rounded-full overflow-hidden shadow-[0_6px_12px_rgba(0,0,0,0.2)] transition-all duration-300 ease-in hover:border-primary">
+              <div className="relative flex justify-center items-center w-[250px] h-[250px] mx-auto border-4 border-[#ccc] rounded-full overflow-hidden shadow-[0_6px_12px_rgba(0,0,0,0.2)] transition-all duration-300 ease-in group-hover:border-primary max-[768px]:w-[200px] max-[768px]:h-[200px] max-[480px]:w-[150px] max-[480px]:h-[150px]">
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-[250px] h-[250px] object-cover rounded-[30%] transition-transform duration-300 ease-in hover:scale-110"
+                  className="w-[250px] h-[250px] object-cover rounded-[30%] transition-transform duration-300 ease-in group-hover:scale-110 max-[768px]:w-[200px] max-[768px]:h-[200px] max-[480px]:w-[150px] max-[480px]:h-[150px]"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-70 opacity-0 flex justify-center items-center transition-opacity duration-300 ease-in hover:opacity-100">
-                  <a
-                    href={member.resumeLink}
-                    className="text-secondary text-[1.2rem] font-semibold bg-primary bg-opacity-80 py-2 px-4 rounded-[5px] no-underline hover:bg-opacity-100 transition-all duration-300 ease-in transform scale-100 hover:scale-110 hover:underline"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    View Resume
-                  </a>
-                </div>
               </div>
-              <h3 className="mt-[20px] mb-[10px] text-[1.4rem] font-bold text-[#222]">
+              <div className="mt-4 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-in max-[768px]:opacity-100 max-[768px]:translate-y-0 max-[480px]:mt-2">
+                <a
+                  href={member.resumeLink}
+                  className="flex items-center justify-center gap-2 text-primary text-[1rem] font no-underline hover:underline transition-all duration-300 ease-in transform scale-100 group-hover:scale-105 max-[480px]:text-[0.875rem] max-[480px]:gap-1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`View resume of ${member.name}`}
+                >
+                  <span>View Resume</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-5 h-5 max-[480px]:w-4 max-[480px]:h-4"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M14 5l7 7m0 0l-7 7m7-7H3"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <h3 className="mt-[20px] mb-[10px] text-[1.4rem] font text-[#222] max-[768px]:text-[1.2rem] max-[768px]:mt-[15px] max-[768px]:mb-[8px] max-[480px]:text-[1rem] max-[480px]:mt-[10px] max-[480px]:mb-[5px]">
                 {member.name}
               </h3>
-              <p className="text-[1.2rem] text-[#555]">{member.role}</p>
+              <p className="text-[1.2rem] text-[#555] max-[768px]:text-[1rem] max-[480px]:text-[0.875rem]">
+                {member.role}
+              </p>
             </div>
           ))}
         </div>

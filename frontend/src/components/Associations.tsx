@@ -2,7 +2,7 @@
 import React from "react";
 
 const img1 = "/as1-new.png";
-const img2 = "/guj.png";
+const img2 = "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068560/startupguj_wzfm2b.png";
 const img3 = "/as3-new.png";
 const img4 = "/as4-new.png";
 const img5 = "/as5-new.png";

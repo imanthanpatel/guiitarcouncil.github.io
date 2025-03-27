@@ -1,24 +1,21 @@
 import React, { useState } from "react";
 import Navbar from "./Navbar";
 import Team from "./Team";
-
-const image = "/campus.jpg";
+import Footer from "./Footer";
+import Infrastructure from "./Infrastructure";
 
 const About: React.FC = () => {
-  // State for managing the menu toggle
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="mainabout">
-      {/* Pass the state and setter function to Navbar */}
       <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
 
       <div className="relative w-full h-[60vh] overflow-hidden bg-primary">
-        {/* Geometric background */}
         <div
           className="absolute inset-0 bg-primary bg-opacity-80"
           style={{
-            backgroundImage: `url('/background.jpg')`,
+            backgroundImage: `url("https://res.cloudinary.com/dopcjxehj/image/upload/v1743068853/contact_qbimui.jpg")`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
@@ -29,7 +26,6 @@ const About: React.FC = () => {
       </div>
 
       <div className="about-content">
-        {/* Content for about section */}
         <div className="flex flex-row items-center justify-center p-[40px] bg-secondary max-[750px]:flex-col">
           <div className="flex-1 p-[30px] text-[#333] text-left max-[750px]:flex-none max-[750px]:p-0 max-[750px]:text-center">
             <h2 className="text-primary mb-[20px]">About Us</h2>
@@ -65,7 +61,7 @@ const About: React.FC = () => {
 
           <div className="flex-1 flex justify-center items-center p-[20px]">
             <img
-              src={image}
+              src="https://res.cloudinary.com/dopcjxehj/image/upload/v1743068851/campus_vggvjo.jpg"
               alt="GUIITAR Image"
               className="max-w-full h-auto rounded-[8px]"
             />
@@ -78,7 +74,6 @@ const About: React.FC = () => {
           </h2>
 
           <div className="flex flex-wrap justify-around gap-5">
-            {/* President's Message */}
             <div className="flex-1 max-w-[300px] bg-secondary border border-[#ddd] rounded-[8px] p-5 shadow-[0_2px_4px_rgba(0,0,0,0.1)] max-[750px]:flex-none">
               <p className="text-[#555] leading-[1.6]">
                 "Every great innovation starts with a single spark of curiosity.
@@ -105,7 +100,6 @@ const About: React.FC = () => {
               </p>
             </div>
 
-            {/* Provost's Message */}
             <div className="flex-1 max-w-[300px] bg-secondary border border-[#ddd] rounded-[8px] p-5 shadow-[0_2px_4px_rgba(0,0,0,0.1)] max-[750px]:flex-none">
               <p className="text-[#555] leading-[1.6]">
                 "Innovation is not to repeat a success story but to celebrate a
@@ -122,18 +116,18 @@ const About: React.FC = () => {
 
         <div
           id="leadership"
-          className="mt-[30px] border-t border-[#ddd] bg-primary"
+          className="mt-[30px] border-t border-[#ddd] bg-[#2b5482]"
         >
-          <h2 className="pt-[20px] text-secondary text-[2rem] mb-[20px] text-center max-[768px]:text-[1.5rem]">
+          <h2 className="pt-[20px] text-white text-[2rem] mb-[20px] text-center max-[768px]:text-[1.5rem]">
             Meet our Leadership
           </h2>
           <Team />
         </div>
         <div id="infra" className="infra">
-          {/* <Infrastructure /> */}
+          <Infrastructure />
         </div>
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };
