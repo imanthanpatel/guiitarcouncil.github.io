@@ -14,7 +14,6 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
-const logo1 = "/white.png";
 
 const Footer: React.FC = () => {
   return (
@@ -168,7 +167,7 @@ const Footer: React.FC = () => {
         {/* Footer Bottom */}
         <div className="footer-bottom flex flex-col md:flex-row justify-between items-center mt-3 max-w-7xl mx-auto px-5">
           <img
-            src={logo1}
+            src="https://res.cloudinary.com/dopcjxehj/image/upload/v1743089168/white_logo_trewbg.png"
             alt="GUIITAR Council Logo"
             className="h-[50px] mb-4 md:mb-0"
           />

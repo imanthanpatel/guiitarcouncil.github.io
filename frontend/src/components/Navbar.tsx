@@ -2,7 +2,7 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-const logo1 = "/new.png";
+// const logo1 = "/new.png";
 
 interface NavbarProps {
   isOpen: boolean;
@@ -28,7 +28,7 @@ const Navbar: React.FC<NavbarProps> = ({ isOpen, setIsOpen }) => {
         <div className="pl-5 flex items-center">
           <Link to="/" onClick={() => handleNavigation("/")}>
             <img 
-              src={logo1} 
+              src="https://res.cloudinary.com/dopcjxehj/image/upload/v1743065708/new_f92wp6.png"
               alt="Logo" 
               className="h-[50px] cursor-pointer object-contain"
             />

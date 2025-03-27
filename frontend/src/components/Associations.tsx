@@ -1,26 +1,26 @@
 // src/components/Associations.tsx
 import React from "react";
 
-const img1 = "/as1-new.png";
+const img1 = "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068560/as1-new_bjmxhq.png";
 const img2 = "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068560/startupguj_wzfm2b.png";
-const img3 = "/as3-new.png";
-const img4 = "/as4-new.png";
-const img5 = "/as5-new.png";
-const img6 = "/as6-new.png";
-const img7 = "/as7-new.png";
-const img8 = "/as8.png";
-const img9 = "/as9.png";
-const img10 = "/as10-new.png";
-const img11 = "/as11-new.png";
-const img12 = "/as12-new.png";
-const img13 = "/as13-new.png";
-const img14 = "/as14-new.png";
-const img15 = "/as15-new.png";
-const img16 = "/as16-new.png";
-const img17 = "/as17-new.png";
-const img18 = "/as18-new.png";
-const img19 = "/as19-new.jpeg";
-const img20 = "/as20-new.png";
+const img3 = "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068560/as3-new_hfqwad.png";
+const img4 = "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068561/as4-new_pufqeo.png";
+const img5 = "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068561/as5-new_aoid2r.png";
+const img6 = "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068562/as6-new_hgdips.png";
+const img7 = "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068562/as7-new_gmllru.png";
+const img8 = "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068563/as8_rcoum6.png";
+const img9 = "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068563/as9_yjatkd.png";
+const img10 = "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068564/as10-new_rfyxw8.png";
+const img11 = "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068565/as11-new_yi6opd.png";
+const img12 = "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068556/as12-new_a0j0zl.png";
+const img13 = "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068557/as13-new_wdzgzz.png";
+const img14 = "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068556/as14-new_kkzmhk.png";
+const img15 = "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068557/as15-new_dfnkv7.png";
+const img16 = "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068557/as16-new_qwbvgg.png";
+const img17 = "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068558/as17-new_c5z1kq.png";
+const img18 = "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068558/as18-new_nhzvq0.png";
+const img19 = "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068558/as19-new_xry8ie.jpg";
+const img20 = "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068559/as20-new_vt4qfv.png";
 
 interface Association {
   src: string;

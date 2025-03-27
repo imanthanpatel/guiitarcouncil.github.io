@@ -2,8 +2,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const missionImage = "/trial.png";
-
 const Mission: React.FC = () => {
   return (
     <div className="flex flex-col items-center justify-center px-[3vw] py-8 text-center bg-[#f9f9f9] text-[var(--primary-color)]">
@@ -15,7 +13,7 @@ const Mission: React.FC = () => {
       {/* Image Wrapper */}
       <div className="max-w-full w-[650px] my-[30px] shadow-[0_4px_8px_rgba(0,0,0,0.1)] rounded-[10px] overflow-hidden max-[768px]:max-w-full max-[480px]:w-[300px]">
         <img
-          src={missionImage}
+          src="https://res.cloudinary.com/dopcjxehj/image/upload/v1743068862/trial_roaybi.png"
           alt="MassChallenge Overview"
           className="w-[650px] h-auto max-[480px]:w-[300px]"
         />

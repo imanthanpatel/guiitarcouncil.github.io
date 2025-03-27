@@ -137,7 +137,7 @@ const Funding: React.FC = () => {
           </div>
           <div className="image-car ipr-logo flex flex-col justify-center items-center text-center rounded-[15px] p-[40px] gap-[30px] text-[3rem] text-primary font bg-[#f0f8ff] shadow-[0_4px_8px_rgba(0,0,0,0.1)] border-2 border-[#ccc] transition-all duration-300 ease-in hover:-translate-y-[5px] hover:shadow-[0_8px_16px_rgba(0,0,0,0.2)] max-[1024px]:p-[30px] max-[768px]:p-[20px] max-[480px]:p-[15px] max-[768px]:h-[200px] max-[480px]:h-[150px]">
             <img
-              // src={ipr_logo}
+              src="https://res.cloudinary.com/dopcjxehj/image/upload/v1743089682/one_refxk2.jpg"
               alt="IPR Centre Logo"
               className="h-[400px] w-auto object-contain max-[768px]:h-[120px] max-[480px]:h-[100px]"
             />

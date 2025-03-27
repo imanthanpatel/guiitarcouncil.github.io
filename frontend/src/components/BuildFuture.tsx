@@ -16,7 +16,7 @@ const BuildFuture: React.FC = () => {
       <div className="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-[35px] mt-5 px-[50px] max-[750px]:px-0">
         <div className="bg-[#fff] border-2 border-[#e0e0e0] rounded-[10px] p-5 shadow-[0_4px_6px_rgba(0,0,0,0.1)] transition-transform duration-300 ease-in-out hover:-translate-y-[5px] hover:shadow-[0_6px_10px_rgba(0,0,0,0.4)] max-[750px]:my-[10px]">
           <img
-            src={moneyIcon}
+            src="https://res.cloudinary.com/dopcjxehj/image/upload/v1743068849/money_goqk8b.png"
             alt="Funding"
             className="h-[70px] w-[70px] mx-auto mb-[10px] object-contain"
           />
@@ -39,7 +39,7 @@ const BuildFuture: React.FC = () => {
         </div>
         <div className="bg-[#f9f9f9] border-2 border-[#e0e0e0] rounded-[10px] p-5 shadow-[0_4px_6px_rgba(0,0,0,0.1)] transition-transform duration-300 ease-in-out hover:-translate-y-[5px] hover:shadow-[0_6px_10px_rgba(0,0,0,0.4)] max-[750px]:my-[10px]">
           <img
-            src={urbanIcon}
+            src="https://res.cloudinary.com/dopcjxehj/image/upload/v1743068846/urban_jyvdup.png"
             alt="Infrastructure"
             className="h-[70px] w-[70px] mx-auto mb-[10px] object-contain"
           />
@@ -64,7 +64,7 @@ const BuildFuture: React.FC = () => {
         </div>
         <div className="bg-[#f9f9f9] border-2 border-[#e0e0e0] rounded-[10px] p-5 shadow-[0_4px_6px_rgba(0,0,0,0.1)] transition-transform duration-300 ease-in-out hover:-translate-y-[5px] hover:shadow-[0_6px_10px_rgba(0,0,0,0.4)] max-[750px]:my-[10px]">
           <img
-            src={communityIcon}
+            src="https://res.cloudinary.com/dopcjxehj/image/upload/v1743068847/community_aahpwt.png"
             alt="Mentorship"
             className="h-[70px] w-[70px] mx-auto mb-[10px] object-contain"
           />
@@ -87,7 +87,7 @@ const BuildFuture: React.FC = () => {
         </div>
         <div className="bg-[#f9f9f9] border-2 border-[#e0e0e0] rounded-[10px] p-5 shadow-[0_4px_6px_rgba(0,0,0,0.1)] transition-transform duration-300 ease-in-out hover:-translate-y-[5px] hover:shadow-[0_6px_10px_rgba(0,0,0,0.4)] max-[750px]:my-[10px]">
           <img
-            src={brainIcon}
+            src="https://res.cloudinary.com/dopcjxehj/image/upload/v1743068846/brain_fvnaca.png"
             alt="IPR Support"
             className="h-[70px] w-[70px] mx-auto mb-[10px] object-contain"
           />
