@@ -2,11 +2,6 @@
 import React from "react";
 import { HashLink } from "react-router-hash-link";
 
-const moneyIcon = "/money.png";
-const urbanIcon = "/urban.png";
-const communityIcon = "/community.png";
-const brainIcon = "/brain.png";
-
 const BuildFuture: React.FC = () => {
   return (
     <section className="bg-[var(--primary-color)] text-[#fff] text-center py-[70px] px-5">

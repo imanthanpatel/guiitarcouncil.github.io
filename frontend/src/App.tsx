@@ -1,9 +1,7 @@
-// src/App.tsx
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar"; 
 import Footer from "./components/Footer"; 
-// import Notfound from "./components/Notfound";
 import Carousel from "./components/Carousel";
 import Mission from "./components/Mission";
 import BuildFuture from "./components/BuildFuture";
@@ -13,6 +11,7 @@ import Faqs from "./components/Faqs";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Funding from "./components/Funding";
+// import Notfound from "./components/Notfound";
 
 const AppContent: React.FC = () => {
   const location = useLocation();
@@ -83,7 +82,6 @@ const AppContent: React.FC = () => {
               <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
               <div className={`min-h-screen bg-gray-50 transition-all duration-300 ${isOpen ? "pt-[300px]" : "pt-[80px]"} md:pt-[80px]`}>
                 <Contact/>
-                <Footer />
               </div>
             </>
           }

@@ -34,7 +34,7 @@ const Funding: React.FC = () => {
                   rel="noopener noreferrer"
                   aria-label="Learn more about SSIP 2.0"
                 >
-                  <button className="mt-[20px] px-[20px] py-[10px] text-[1.2rem] bg-primary text-secondary border-none rounded-[8px] cursor-pointer transition-all duration-300 ease-in hover:bg-secondary hover:text-primary hover:border hover:border-[#333] max-[1024px]:text-[1.1rem] max-[768px]:text-[1rem] max-[480px]:text-[0.875rem] max-[480px]:px-[15px] max-[480px]:py-[8px]">
+                  <button className="mt-[20px] px-[20px] py-[10px] text-[1.2rem] bg-[#2b5482] text-white border-none rounded-[8px] cursor-pointer transition-all duration-300 ease-in hover:bg-secondary hover:text-primary hover:border hover:border-[#333] max-[1024px]:text-[1.1rem] max-[768px]:text-[1rem] max-[480px]:text-[0.875rem] max-[480px]:px-[15px] max-[480px]:py-[8px]">
                     Learn More
                   </button>
                 </a>
@@ -46,7 +46,7 @@ const Funding: React.FC = () => {
                   rel="noopener noreferrer"
                   aria-label="Apply for SSIP 2.0 funding"
                 >
-                  <button className="mt-[20px] px-[20px] py-[10px] text-[1.2rem] bg-primary text-secondary border-none rounded-[8px] cursor-pointer transition-all duration-300 ease-in hover:bg-secondary hover:text-primary hover:border hover:border-[#333] max-[1024px]:text-[1.1rem] max-[768px]:text-[1rem] max-[480px]:text-[0.875rem] max-[480px]:px-[15px] max-[480px]:py-[8px]">
+                  <button className="mt-[20px] px-[20px] py-[10px] text-[1.2rem] bg-[#2b5482] text-white border-none rounded-[8px] cursor-pointer transition-all duration-300 ease-in hover:bg-secondary hover:text-primary hover:border hover:border-[#333] max-[1024px]:text-[1.1rem] max-[768px]:text-[1rem] max-[480px]:text-[0.875rem] max-[480px]:px-[15px] max-[480px]:py-[8px]">
                     Apply Now!
                   </button>
                 </a>
@@ -82,7 +82,7 @@ const Funding: React.FC = () => {
                   rel="noopener noreferrer"
                   aria-label="Learn more about Nodal Institute"
                 >
-                  <button className="mt-[20px] px-[20px] py-[10px] text-[1.2rem] bg-primary text-secondary border-none rounded-[8px] cursor-pointer transition-all duration-300 ease-in hover:bg-secondary hover:text-primary hover:border hover:border-[#333] max-[1024px]:text-[1.1rem] max-[768px]:text-[1rem] max-[480px]:text-[0.875rem] max-[480px]:px-[15px] max-[480px]:py-[8px]">
+                  <button className="mt-[20px] px-[20px] py-[10px] text-[1.2rem] bg-[#2b5482] text-white border-none rounded-[8px] cursor-pointer transition-all duration-300 ease-in hover:bg-secondary hover:text-primary hover:border hover:border-[#333] max-[1024px]:text-[1.1rem] max-[768px]:text-[1rem] max-[480px]:text-[0.875rem] max-[480px]:px-[15px] max-[480px]:py-[8px]">
                     Learn More
                   </button>
                 </a>
@@ -94,7 +94,7 @@ const Funding: React.FC = () => {
                   rel="noopener noreferrer"
                   aria-label="Apply for Nodal Institute funding"
                 >
-                  <button className="mt-[20px] px-[20px] py-[10px] text-[1.2rem] bg-primary text-secondary border-none rounded-[8px] cursor-pointer transition-all duration-300 ease-in hover:bg-secondary hover:text-primary hover:border hover:border-[#333] max-[1024px]:text-[1.1rem] max-[768px]:text-[1rem] max-[480px]:text-[0.875rem] max-[480px]:px-[15px] max-[480px]:py-[8px]">
+                  <button className="mt-[20px] px-[20px] py-[10px] text-[1.2rem] bg-[#2b5482] text-white border-none rounded-[8px] cursor-pointer transition-all duration-300 ease-in hover:bg-secondary hover:text-primary hover:border hover:border-[#333] max-[1024px]:text-[1.1rem] max-[768px]:text-[1rem] max-[480px]:text-[0.875rem] max-[480px]:px-[15px] max-[480px]:py-[8px]">
                     Apply Now!
                   </button>
                 </a>
@@ -116,7 +116,7 @@ const Funding: React.FC = () => {
                   rel="noopener noreferrer"
                   aria-label="Learn more about IPR Centre"
                 >
-                  <button className="mt-[20px] px-[20px] py-[10px] text-[1.2rem] bg-primary text-secondary border-none rounded-[8px] cursor-pointer transition-all duration-300 ease-in hover:bg-secondary hover:text-primary hover:border hover:border-[#333] max-[1024px]:text-[1.1rem] max-[768px]:text-[1rem] max-[480px]:text-[0.875rem] max-[480px]:px-[15px] max-[480px]:py-[8px]">
+                  <button className="mt-[20px] px-[20px] py-[10px] text-[1.2rem] bg-[#2b5482] text-white border-none rounded-[8px] cursor-pointer transition-all duration-300 ease-in hover:bg-secondary hover:text-primary hover:border hover:border-[#333] max-[1024px]:text-[1.1rem] max-[768px]:text-[1rem] max-[480px]:text-[0.875rem] max-[480px]:px-[15px] max-[480px]:py-[8px]">
                     Learn More
                   </button>
                 </a>
@@ -128,7 +128,7 @@ const Funding: React.FC = () => {
                   rel="noopener noreferrer"
                   aria-label="Apply for IPR Centre support"
                 >
-                  <button className="mt-[20px] px-[20px] py-[10px] text-[1.2rem] bg-primary text-secondary border-none rounded-[8px] cursor-pointer transition-all duration-300 ease-in hover:bg-secondary hover:text-primary hover:border hover:border-[#333] max-[1024px]:text-[1.1rem] max-[768px]:text-[1rem] max-[480px]:text-[0.875rem] max-[480px]:px-[15px] max-[480px]:py-[8px]">
+                  <button className="mt-[20px] px-[20px] py-[10px] text-[1.2rem] bg-[#2b5482] text-white border-none rounded-[8px] cursor-pointer transition-all duration-300 ease-in hover:bg-secondary hover:text-primary hover:border hover:border-[#333] max-[1024px]:text-[1.1rem] max-[768px]:text-[1rem] max-[480px]:text-[0.875rem] max-[480px]:px-[15px] max-[480px]:py-[8px]">
                     Apply Now!
                   </button>
                 </a>
