@@ -6,88 +6,171 @@ import React, { useState } from "react";
 // const abha = "/Assets/team/AI/drabha.jpg";
 // const mrpuranik = "/Assets/team/AI/mrpuranik.jpg";
 // const msrajput = "/Assets/team/AI/msrajput.jpg";
-const dummy = "/dummy.jpeg";
-const drbose = "/team/drbose.jpg";
-const drmadhukumar = "/team/drmadhukumar.jpg";
-const drprajapati = "/team/drprajapati.jpg";
-const mrgrsinha = "/team/mr_grsinha.jpg";
-const mrali = "/team/mrali.jpg";
-const mranupam = "/team/mranupam.jpg";
-const mrbhavesh = "/team/mrbhavesh.jpg";
-const mrbimal = "/team/mrbimal.jpg";
-const mrhemal = "/team/mrhemal.jpg";
-const mrhemant = "/team/hemantsir.jpg";
-const mrkiran = "/team/mrkiran.jpg";
-const mrnilesh = "/team/mrnilesh.jpg";
-const mmirav = "/team/mrnirav.jpg";
-const mrpanchal = "/team/mrpanchal.jpg";
-const mrpktaneja = "/team/mrpktaneja.jpg";
-const mrpujan = "/team/mrpujan.jpg";
-const ramanan = "/team/mrramanan.jpg";
-const mrravin = "/team/mrravin.jpg";
-const mrshankar = "/team/mrshankar.jpg";
-const mrutkarsh = "/team/mrutkarsh.jpg";
-const msmagare = "/team/msmagare.jpg";
-const mspoyni = "/team/mspoyni.jpg";
-const msswati = "/team/msswati.jpg";
-const drTrivedi = "/team/drTrivedi.jpg";
-const devjaniBanerjee = "/team/devjaniBanerjee.jpg";
-const chetnaParmar = "/team/chetnaParmar.jpg";
-const mosamPatel = "/team/mosamPatel.jpg";
-const artiBhadoria = "/team/artiBhadoria.jpg";
-const parinKanaiya = "/team/parinKanaiya.jpg";
-const swatiSaxena = "/team/swatiSaxena.jpg";
-const artiHansda = "/team/artiHansda.jpg";
-const akashDadhania = "/team/akashDadhania.jpg";
-const amitPatel = "/team/amitPatel.jpg";
-const anantAcharya = "/team/anantAcharya.jpg";
-const ashishKumar = "/team/ashishKumar.jpg";
-const ashutoshTewari = "/team/ashutoshTewari.jpg";
-const ashwinParikh = "/team/ashwinParikh.jpg";
-const bhaveshChelani = "/team/bhaveshChelani.jpg";
-const bhaveshKothari = "/team/bhaveshKothari.jpg";
-const Bhavik = "/team/Bhavik.jpg";
-const BHAVIK_BHANSALI = "/team/BHAVIK_BHANSALI.jpg";
-const brijeshGarala = "/team/brijeshGarala.jpg";
-const chintanPopat = "/team/chintanPopat.jpg";
-const devangPatel = "/team/devangPatel.jpg";
-const deveshChawla = "/team/deveshChawla.jpg";
-const dhruvNath = "/team/dhruvNath.jpg";
-const Heena = "/team/Heena.jpg";
-const HITESH_PORWAL = "/team/HITESH_PORWAL.jpg";
-const javidShaikh = "/team/javidShaikh.jpg";
-const jekishanParmar = "/team/jekishanParmar.jpg";
-const jitendraJain = "/team/jitendraJain.jpg";
-const kalpeshShah = "/team/kalpeshShah.jpg";
-const karanShah = "/team/karanShah.jpg";
-const karmjitsinhBihola = "/team/karmjitsinhBihola.jpg";
-const kavitaSaxena = "/team/kavitaSaxena.jpg";
-const manojShukla = "/team/manojShukla.jpg";
-const nileshVaghela = "/team/nileshVaghela.jpg";
-const PRAKASH_VAGHASIYA = "/team/PRAKASH_VAGHASIYA.jpg";
-const rupeshShah = "/team/rupeshShah.jpg";
-const saurabhJain = "/team/saurabhJain.jpg";
-const sudhirGupta = "/team/sudhirGupta.jpg";
-const sureshOthayoth = "/team/sureshOthayoth.jpg";
-const krish = "/team/krish.jpg";
-const foram = "/team/foram.jpg";
-const kartavi = "/team/kartavi.jpg";
-const chandraveer = "/team/chandraveer.png";
-const chaitali = "/team/chaitalikarpe.jpeg";
-const chhaya = "/team/ChhayaRaundal.jpeg";
-const drchandra = "/team/drchandra.jpeg";
-const drnilesh = "/team/drnilesh.jpeg";
-const drrahul = "/team/drrahul.jpg";
-const drmihir = "/team/drmihir.jpg";
-const drjignesh = "/team/drjignesh.jpg";
-const ishika = "/team/IshikaPatel.jpeg";
-const Abidhusain = "/team/MrAbidhusain.jpeg";
-const mranup = "/team/mranup.jpg";
-const pranjal = "/team/pranjal.png";
-const Charmi = "/team/MsCharmi.jpeg";
-const soham = "/team/Soham.png";
-const vedantratna = "/team/Vedantratna.jpeg";
-const dhruv_verma = "/team/dhruv.jpg";
+
+const dummy =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068625/dhruv_kfxnz7.jpg";
+const drbose =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068727/sanjukta_bose_k4tfew.jpg";
+const drmadhukumar =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068629/drmadhukumar_o8pfhu.jpg";
+const drprajapati =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068630/drprajapati_ypczef.jpg";
+const mrgrsinha =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068647/mr_grsinha_bhbmg4.jpg";
+const mrali =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068651/mrali_cardsj.jpg";
+const mranupam =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068652/mranupam_pohuly.jpg";
+const mrbhavesh =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068654/mrbhavesh_yonp29.jpg";
+const mrbimal =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068655/mrbimal_d4r8h2.jpg";
+const mrhemal =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068656/mrhemal_fzbb5p.jpg";
+const mrhemant =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068642/hemantsir_irkbsj.jpg";
+const mrkiran =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068658/mrkiran_wpigss.jpg";
+const mrnilesh =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068660/mrnirav_iqrfx1.jpg";
+const mrnirav =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068660/mrnirav_iqrfx1.jpg";
+const mrpanchal =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068661/mrpanchal_g3v5ku.jpg";
+const mrpktaneja =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068724/pk_taneja_pq9i2q.jpg";
+const mrpujan =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068661/mrpujan_ov7rvt.jpg";
+const ramanan =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068665/mrramanan_t90lph.jpg";
+const mrravin =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068666/mrravin_zsrq5f.jpg";
+const mrshankar =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068680/mrshankar_d8pvxh.jpg";
+const mrutkarsh =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068716/mrutkarsh_t4mamo.jpg";
+const msmagare =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068718/msmagare_ocjvny.jpg";
+const mspoyni =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068719/mspoyni_bpxhog.jpg";
+const msswati =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068721/msswati_yw12e4.jpg";
+const drTrivedi =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068632/drTrivedi_efxgjx.jpg";
+const devjaniBanerjee =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068624/devjaniBanerjee_tlo8oe.jpg";
+const chetnaParmar =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068619/chetnaParmar_yfnx5c.jpg";
+const mosamPatel =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068646/mosamPatel_luof6n.jpg";
+const artiBhadoria =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068734/artiBhadoria_xqz49x.jpg";
+const parinKanaiya =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068723/parinKanaiya_ncss5w.jpg";
+const swatiSaxena =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068730/swatiSaxena_int6i1.jpg";
+const artiHansda =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068735/artiHansda_gv8r2e.jpg";
+const akashDadhania =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068732/akash_dadhania_frz2do.jpg";
+const amitPatel =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068733/amitPatel_itsz5t.jpg";
+const anantAcharya =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068733/anantAcharya_pdpleu.jpg";
+const ashishKumar =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068735/ashishKumar_xpeop2.jpg";
+const ashutoshTewari =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068736/ashutoshTewari_qjytum.jpg";
+const ashwinParikh =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068737/ashwinParikh_pvlsbh.jpg";
+const bhaveshChelani =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068737/bhaveshChelani_raywik.jpg";
+const bhaveshKothari =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068738/bhaveshKothari_ibrrho.jpg";
+const Bhavik =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068739/Bhavik_tlzsaf.jpg";
+const BHAVIK_BHANSALI =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068741/BHAVIK_BHANSALI_cdzcjl.jpg";
+const brijeshGarala =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068741/brijeshGarala_ymszsa.jpg";
+const chintanPopat =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068621/chintanPopat_vyngwy.jpg";
+const devangPatel =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068622/devangPatel_nqxnwm.jpg";
+const deveshChawla =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068623/deveshChawla_e931vr.jpg";
+const dhruvNath =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068626/dhruvNath_ba3e2w.jpg";
+const Heena =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068632/Heena_cgb9ch.jpg";
+const HITESH_PORWAL =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068633/HITESH_PORWAL_u14kdn.jpg";
+const javidShaikh =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068636/javidShaikh_w5rso1.jpg";
+const jekishanParmar =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068637/jekishanParmar_qruizp.jpg";
+const jitendraJain =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068638/jitendraJain_oruign.jpg";
+const kalpeshShah =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068639/kalpeshShah_joqjhn.jpg";
+const karanShah =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068641/karanShah_kq4vvj.jpg";
+const karmjitsinhBihola =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068643/karmjitsinhBihola_tonpdi.jpg";
+const kavitaSaxena =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068644/kavitaSaxena_dzfbg1.jpg";
+const manojShukla =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068644/manojShukla_kdobmf.jpg";
+const nileshVaghela =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068722/nileshVaghela_hfv68d.jpg";
+const PRAKASH_VAGHASIYA =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068725/PRAKASH_VAGHASIYA_dils92.jpg";
+const rupeshShah =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068726/rupeshShah_odommw.jpg";
+const saurabhJain =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068728/saurabhJain_qbia4b.jpg";
+const sudhirGupta =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068729/sudhirGupta_ozqefj.jpg";
+const sureshOthayoth =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068730/sureshOthayoth_nrjh3x.jpg";
+const krish =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068650/krish_ibj5de.jpg";
+const foram =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068646/foram_msehlq.jpg";
+const kartavi =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068648/kartavi_pxkpla.jpg";
+const chandraveer =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068618/chandraveer_ikxedq.png";
+const chaitali =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068742/chaitalikarpe_qp8mqs.jpg";
+const chhaya =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068620/ChhayaRaundal_n8di4m.jpg";
+const drchandra =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068627/drchandra_lrl3it.jpg";
+const drnilesh =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068630/drnilesh_o3ikuu.jpg";
+const drrahul =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068631/drrahul_lhskon.jpg";
+const drmihir =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068629/drmihir_eh0zjh.jpg";
+const drjignesh =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068628/drjignesh_kdyj4f.jpg";
+const ishika =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068634/IshikaPatel_bdyaum.jpg";
+const Abidhusain =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068649/MrAbidhusain_q28i3r.jpg";
+const mranup =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068652/mranup_jicdrs.jpg";
+const pranjal =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068726/pranjal_tbznpe.png";
+const Charmi =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068718/MsCharmi_jg7rq3.jpg";
+const soham =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068729/Soham_vuqlss.png";
+const vedantratna =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743068731/Vedantratna_cilhhc.jpg";
+const devanshi =
+  "https://res.cloudinary.com/dopcjxehj/image/upload/v1743075961/WhatsApp_Image_2025-03-27_at_17.14.31_67532fc6_vevmxd.jpg";
 
 interface Tab {
   id: string;
@@ -392,7 +475,7 @@ const TabbedAboutTeam: React.FC = () => {
         role: "Advisor",
         resumeLink:
           "https://drive.google.com/file/d/1ovlOr2LVEmLbqmK8-H2JtIt0A2ONA3Kt/view?usp=drive_link",
-        image: mmirav,
+        image: mrnirav,
       },
       {
         name: "Mr. Azam Ali Khan",
@@ -759,7 +842,7 @@ const TabbedAboutTeam: React.FC = () => {
       {
         name: "Ms. Devanshi Mufti",
         role: "Academic Associate",
-        image: dummy,
+        image: devanshi,
         resumeLink: "",
       },
       {
@@ -771,7 +854,7 @@ const TabbedAboutTeam: React.FC = () => {
       {
         name: "Mr. Dhruv Verma",
         role: "Academic Associate",
-        image: dhruv_verma,
+        image: dummy,
         resumeLink: "",
       },
       {
@@ -802,7 +885,6 @@ const TabbedAboutTeam: React.FC = () => {
     ],
   };
 
- 
   return (
     <div className="p-[40px] bg-[#f9f9f9] font text-secondary max-[750px]:p-[20px] max-[480px]:p-[10px]">
       <div className="flex justify-center mb-[30px] flex-wrap gap-2 max-[768px]:flex-col max-[768px]:items-center">
@@ -820,7 +902,7 @@ const TabbedAboutTeam: React.FC = () => {
           </button>
         ))}
       </div>
-  
+
       <div className="text-center">
         <h2 className="text-[2rem] mb-[15px] text-[#333] max-[768px]:text-[1.5rem] max-[480px]:text-[1.25rem] max-[480px]:mb-[10px]">
           {tabs.find((tab) => tab.id === activeTab)?.label}
