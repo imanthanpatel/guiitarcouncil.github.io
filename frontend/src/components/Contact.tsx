@@ -1,5 +1,4 @@
 import Footer from "./Footer";
-import React, { useState } from "react";
 
 const Contact: React.FC = () => {
   const socialLinks = [
@@ -16,38 +15,9 @@ const Contact: React.FC = () => {
     { name: "Instagram", url: "https://www.instagram.com/gsfcuniversity" },
   ];
 
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-  const [statusMessage, setStatusMessage] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-  ) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    try {
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      setStatusMessage("Contact form submitted successfully!");
-      setFormData({ name: "", email: "", message: "" });
-    } catch (error) {
-      setStatusMessage("There was an error submitting the form.");
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
   return (
     <div className="font">
-       <div className="relative w-full h-[60vh] overflow-hidden bg-primary">
+      <div className="relative w-full h-[60vh] overflow-hidden bg-primary">
         <div
           className="absolute inset-0 bg-primary bg-opacity-80"
           style={{
@@ -160,14 +130,12 @@ const Contact: React.FC = () => {
           </h2>
           <form
             className="feedback-form flex flex-col gap-5 items-center w-[70%] max-[768px]:w-[80vw] max-[480px]:w-[90vw]"
-            onSubmit={handleSubmit}
+            // onSubmit={""}
           >
             <input
               type="text"
               name="name"
               placeholder="Name"
-              value={formData.name}
-              onChange={handleChange}
               className="input-field w-full p-[15px] rounded-[8px] border-2 border-[#0d0c0c] bg-secondary text-black text-[18px] focus:outline-none focus:border-primary max-[480px]:text-[16px] max-[480px]:p-[10px]"
               aria-label="Your Name"
               required
@@ -176,8 +144,6 @@ const Contact: React.FC = () => {
               type="email"
               name="email"
               placeholder="Email"
-              value={formData.email}
-              onChange={handleChange}
               className="input-field w-full p-[15px] rounded-[8px] border-2 border-[#0d0c0c] bg-secondary text-black text-[18px] focus:outline-none focus:border-primary max-[480px]:text-[16px] max-[480px]:p-[10px]"
               aria-label="Your Email"
               required
@@ -186,8 +152,6 @@ const Contact: React.FC = () => {
               name="message"
               placeholder="Message"
               rows={5}
-              value={formData.message}
-              onChange={handleChange}
               className="textarea-field w-full p-[15px] rounded-[8px] border-2 border-[#0d0c0c] bg-secondary text-black text-[18px] focus:outline-none focus:border-primary max-[480px]:text-[16px] max-[480px]:p-[10px] max-[480px]:rows-4"
               aria-label="Your Message"
               required
@@ -196,11 +160,6 @@ const Contact: React.FC = () => {
               Submit
             </button>
           </form>
-          {statusMessage && (
-            <p className="footer-note mt-[25px] text-[16px] text-[#ccc] text-center max-[480px]:text-[14px]">
-              {statusMessage}
-            </p>
-          )}
         </div>
       </div>
       <Footer />

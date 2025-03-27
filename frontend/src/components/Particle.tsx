@@ -69,7 +69,7 @@ const Particle: React.FC = () => {
           enable: true,
           mode: "push",
         },
-        resize: true,
+        // resize: true,
       },
       modes: {
         grab: {
@@ -98,7 +98,7 @@ const Particle: React.FC = () => {
         straight: false,
       },
       number: {
-        density: { enable: true, area: 800 },
+        density: { enable: true},
         value: 100,
       },
       opacity: { value: 0.9 },
