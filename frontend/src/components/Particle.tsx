@@ -1,7 +1,7 @@
 // src/components/Particle.tsx
 import { useCallback, useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
-import type { Container, Engine, ISourceOptions } from "@tsparticles/engine";
+import type { Container, ISourceOptions } from "@tsparticles/engine";
 import { loadFull } from "tsparticles";
 
 // Initialize the particle engine once at the module level
@@ -14,8 +14,7 @@ const initializeParticles = async () => {
   }
   console.log("Initializing particles at module level...");
   try {
-    await initParticlesEngine(async (engine: Engine) => {
-      console.log("Loading tsparticles features...");
+    await initParticlesEngine(async (engine) => {
       await loadFull(engine);
       console.log("tsparticles features loaded");
     });
@@ -49,15 +48,17 @@ const Particle: React.FC = () => {
     };
   }, [init]);
 
-  const particlesLoaded = useCallback((container: Container | undefined): void => {
+  const particlesLoaded = useCallback((container: Container | undefined): Promise<void> => {
     console.log("Particles Loaded", container);
+    return Promise.resolve();
   }, []);
+  
 
   const options: ISourceOptions = {
     autoPlay: true,
     fpsLimit: 150,
     detectRetina: true,
-    fullScreen: { enable: false }, // Disable full-screen mode
+    fullScreen: { enable: false },
     interactivity: {
       detectsOn: "window",
       events: {
@@ -69,7 +70,6 @@ const Particle: React.FC = () => {
           enable: true,
           mode: "push",
         },
-        // resize: true,
       },
       modes: {
         grab: {
@@ -98,7 +98,7 @@ const Particle: React.FC = () => {
         straight: false,
       },
       number: {
-        density: { enable: true},
+        density: { enable: true },
         value: 100,
       },
       opacity: { value: 0.9 },
