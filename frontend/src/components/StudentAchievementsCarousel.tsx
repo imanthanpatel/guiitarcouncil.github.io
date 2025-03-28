@@ -400,7 +400,7 @@ const StudentAchievementsCarousel: React.FC = () => {
     touchEndX.current = null;
   };
 
-  const currentProject = projects[currentIndex];
+  // const currentProject = projects[currentIndex];
 
   return (
     <div className="relative w-full max-w-5xl mx-auto py-8 px-2 sm:px-4 lg:py-12">
