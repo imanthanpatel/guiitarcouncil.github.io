@@ -1,9 +1,10 @@
 import React from "react";
+import StudentAchievementsCarousel from "./StudentAchievementsCarousel";
 
 const Funding: React.FC = () => {
   return (
     <>
-       <div className="relative w-full h-[60vh] overflow-hidden bg-primary">
+      <div className="relative w-full h-[60vh] overflow-hidden bg-primary">
         <div
           className="absolute inset-0 bg-primary bg-opacity-80"
           style={{
@@ -20,11 +21,21 @@ const Funding: React.FC = () => {
       <div className="main-content flex justify-center items-center my-[100px] max-[768px]:my-[50px] max-[480px]:my-[30px]">
         <div className="grid-container grid grid-cols-2 gap-[50px] w-[90%] max-w-[1400px] max-[1024px]:gap-[40px] max-[768px]:grid-cols-1 max-[768px]:gap-[30px] max-[480px]:gap-[20px]">
           <div className="car flex flex-col justify-center items-center text-center rounded-[15px] p-[40px] gap-[30px] bg-white shadow-[0_4px_8px_rgba(0,0,0,0.1)] transition-all duration-300 ease-in hover:-translate-y-[5px] hover:shadow-[0_8px_16px_rgba(0,0,0,0.2)] max-[1024px]:p-[30px] max-[768px]:p-[20px] max-[480px]:p-[15px]">
-            <h3 id="ssip" className="text-[#2b5482] text-[4rem] font m-0 max-[1024px]:text-[3rem] max-[768px]:text-[2.5rem] max-[480px]:text-[2rem]">
+            <h3
+              id="ssip"
+              className="text-[#2b5482] text-[4rem] font m-0 max-[1024px]:text-[3rem] max-[768px]:text-[2.5rem] max-[480px]:text-[2rem]"
+            >
               SSIP 2.0
             </h3>
             <p className="text-[#333] text-[1.2rem] max-[1024px]:text-[1.1rem] max-[768px]:text-[1rem] max-[480px]:text-[0.875rem]">
-              SSIP (Student Startup and Innovation Policy) is an initiative by Gujarat Government to empower students and young innovators by fostering a culture of entrepreneurship and innovation. It supports startups in both traditional and emerging technologies. Open to students and alumni across all education levels, SSIP offers financial assistance for prototype or proof of concept (POC) with mentorship and infrastructure to transform ideas into impactful ventures.
+              SSIP (Student Startup and Innovation Policy) is an initiative by
+              Gujarat Government to empower students and young innovators by
+              fostering a culture of entrepreneurship and innovation. It
+              supports startups in both traditional and emerging technologies.
+              Open to students and alumni across all education levels, SSIP
+              offers financial assistance for prototype or proof of concept
+              (POC) with mentorship and infrastructure to transform ideas into
+              impactful ventures.
             </p>
             <div className="funding-btn-container flex justify-center gap-[40px] max-[480px]:gap-[20px]">
               <div className="funding-btn">
@@ -68,11 +79,20 @@ const Funding: React.FC = () => {
             />
           </div>
           <div className="car flex flex-col justify-center items-center text-center rounded-[15px] p-[40px] gap-[30px] bg-white shadow-[0_4px_8px_rgba(0,0,0,0.1)] transition-all duration-300 ease-in hover:-translate-y-[5px] hover:shadow-[0_8px_16px_rgba(0,0,0,0.2)] max-[1024px]:p-[30px] max-[768px]:p-[20px] max-[480px]:p-[15px]">
-            <h3 id="nodal" className="text-[#2b5482] text-[4rem] font m-0 max-[1024px]:text-[3rem] max-[768px]:text-[2.5rem] max-[480px]:text-[2rem]">
+            <h3
+              id="nodal"
+              className="text-[#2b5482] text-[4rem] font m-0 max-[1024px]:text-[3rem] max-[768px]:text-[2.5rem] max-[480px]:text-[2rem]"
+            >
               Nodal Institute
             </h3>
             <p className="text-[#333] text-[1.2rem] max-[1024px]:text-[1.1rem] max-[768px]:text-[1rem] max-[480px]:text-[0.875rem]">
-              GUIITAR Council, recognized under the Gujarat Industrial Policy 2020, empowers startups and innovators by providing funding, mentorship, and resources. With a focus on sectors like AI, agriculture, clean-tech, and healthcare, it offers seed funding up to ₹30 lakhs, monthly sustenance allowances, skill development grants, and support for acceleration programs, fostering a thriving startup ecosystem in Vadodara and beyond.
+              GUIITAR Council, recognized under the Gujarat Industrial Policy
+              2020, empowers startups and innovators by providing funding,
+              mentorship, and resources. With a focus on sectors like AI,
+              agriculture, clean-tech, and healthcare, it offers seed funding up
+              to ₹30 lakhs, monthly sustenance allowances, skill development
+              grants, and support for acceleration programs, fostering a
+              thriving startup ecosystem in Vadodara and beyond.
             </p>
             <div className="funding-btn-container flex justify-center gap-[40px] max-[480px]:gap-[20px]">
               <div className="funding-btn">
@@ -106,7 +126,13 @@ const Funding: React.FC = () => {
               IPR Centre
             </h3>
             <p className="text-[#333] text-[1.2rem] max-[1024px]:text-[1.1rem] max-[768px]:text-[1rem] max-[480px]:text-[0.875rem]">
-              The IPR Centre at GSFC University supports students, faculty, and alumni in protecting their intellectual creations, including patents, copyrights, trademarks, and designs. It raises awareness, provides end-to-end guidance, and ensures effective IP management. Financial support is offered for IP filings under SSIP, covering domestic and international patents, trademarks, copyrights, and more, fostering innovation and securing intellectual Assets.
+              The IPR Centre at GSFC University supports students, faculty, and
+              alumni in protecting their intellectual creations, including
+              patents, copyrights, trademarks, and designs. It raises awareness,
+              provides end-to-end guidance, and ensures effective IP management.
+              Financial support is offered for IP filings under SSIP, covering
+              domestic and international patents, trademarks, copyrights, and
+              more, fostering innovation and securing intellectual Assets.
             </p>
             <div className="funding-btn-container flex justify-center gap-[40px] max-[480px]:gap-[20px]">
               <div className="funding-btn">
@@ -144,6 +170,10 @@ const Funding: React.FC = () => {
           </div>
         </div>
       </div>
+      <h1 className="main-heading text-[3rem] font text-[#2b5482] mb-[20px] text-center pt-[50px] max-[768px]:text-[2.5rem] max-[480px]:text-[2rem]">
+        Startups & Projects Funded
+      </h1>
+      <StudentAchievementsCarousel/>
     </>
   );
 };

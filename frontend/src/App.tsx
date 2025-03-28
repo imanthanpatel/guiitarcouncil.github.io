@@ -63,7 +63,7 @@ const AppContent: React.FC = () => {
           }
         />
         <Route
-          path="/programs"
+          path="/workshop"
           element={
             <>
               <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />

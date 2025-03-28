@@ -1,18 +1,5 @@
-// src/components/Programs.tsx
 import React from "react";
-import { motion } from "framer-motion";
 import "@google/model-viewer";
-const slideInVariants = {
-  hidden: { opacity: 0, x: -100 }, 
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      duration: 0.8,
-      ease: "easeOut",
-    },
-  },
-};
 const Workshops: React.FC = () => {
   return (
     <div className="ac flex flex-col items-center gap-3 ">
@@ -45,7 +32,7 @@ const Workshops: React.FC = () => {
             />
           </div>
           <div className="drone-text flex-1 max-w-[700px] text-left p-[20px] max-[768px]:max-w-full max-[768px]:p-[15px]">
-            <h2 className="text-[24px] text-primary font mb-[15px] max-[768px]:text-[20px] max-[480px]:text-[18px]">
+            <h2 className="text-[24px] text-[#2b5482] font mb-[15px] max-[768px]:text-[20px] max-[480px]:text-[18px]">
               Learn Building Drones
             </h2>
             <p className="text-[22px] text-[#555] leading-[1.6] max-[768px]:text-[18px] max-[480px]:text-[16px]">
@@ -64,16 +51,10 @@ const Workshops: React.FC = () => {
       </div>
 
       {/* 3D Printing Program */}
-      <div className="printing text-center p-[40px] bg-[#f9f9f9] rounded-[12px] m-[20px_0] max-[768px]:p-[20px] max-[480px]:p-[15px]">
-        <div className="printing-content flex flex-wrap justify-between items-center gap-[90px] max-[768px]:flex-col max-[768px]:gap-[30px]">
-          <motion.div
-            className="printing-text flex-1 max-w-[700px] text-left p-[20px] max-[768px]:max-w-full max-[768px]:p-[15px]"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }} // Trigger when 30% of the element is in view
-            variants={slideInVariants}
-          >
-            <h2 className="text-[24px] text-primary font mb-[15px] max-[768px]:text-[20px] max-[480px]:text-[18px]">
+      <div className="drone text-center p-[40px] bg-[#f9f9f9] rounded-[12px] m-[20px_0] max-[768px]:p-[20px] max-[480px]:p-[15px]">
+        <div className="drone-content flex flex-wrap justify-between items-center gap-[90px] max-[768px]:flex-col max-[768px]:gap-[30px]">
+          <div className="drone-text flex-1 max-w-[700px] text-left p-[20px] max-[768px]:max-w-full max-[768px]:p-[15px]">
+            <h2 className="text-[24px] text-[#2b5482] font mb-[15px] max-[768px]:text-[20px] max-[480px]:text-[18px]">
               Learn 3D Printing
             </h2>
             <p className="text-[22px] text-[#555] leading-[1.6] max-[768px]:text-[18px] max-[480px]:text-[16px]">
@@ -87,7 +68,7 @@ const Workshops: React.FC = () => {
               technologies, software, and design principles, all while creating
               unique and functional items.
             </p>
-          </motion.div>
+          </div>
           <div className="printing-model flex-1 w-full max-w-[700px] max-[768px]:max-w-full">
             <model-viewer
               src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
@@ -95,12 +76,13 @@ const Workshops: React.FC = () => {
               auto-rotate
               camera-controls
               background-color="#f0f0f0"
-              style={{ width: "100%", height: "400px" }}
+              style={{height: "450px" }}
               className="rounded-[10px] max-[768px]:h-[300px] max-[480px]:h-[250px]"
             ></model-viewer>
           </div>
         </div>
       </div>
+
     </div>
   );
 };
