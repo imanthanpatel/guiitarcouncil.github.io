@@ -170,7 +170,7 @@ const Funding: React.FC = () => {
           </div>
         </div>
       </div>
-      <h1 className="main-heading text-[3rem] font text-[#2b5482] mb-[20px] text-center pt-[50px] max-[768px]:text-[2.5rem] max-[480px]:text-[2rem]">
+      <h1 id ="#achievement"className="main-heading text-[3rem] font text-[#2b5482] mb-[20px] text-center pt-[50px] max-[768px]:text-[2.5rem] max-[480px]:text-[2rem]">
         Startups & Projects Funded
       </h1>
       <StudentAchievementsCarousel/>

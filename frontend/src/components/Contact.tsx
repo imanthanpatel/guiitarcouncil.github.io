@@ -125,7 +125,7 @@ const Contact: React.FC = () => {
         </div>
 
         <div className="feedback-container flex-1 p-[30px_50px] flex flex-col justify-center items-center bg-secondary max-[768px]:p-0 max-[480px]:pb-[20px]">
-          <h2 className="feedback-title text-[#2b5482] text-[50px] text-center mb-[30px] max-[1024px]:text-[40px] max-[768px]:text-[11vw] max-[480px]:text-[30px] max-[480px]:mb-[20px]">
+          <h2 id = "ask"className="feedback-title text-[#2b5482] text-[50px] text-center mb-[30px] max-[1024px]:text-[40px] max-[768px]:text-[11vw] max-[480px]:text-[30px] max-[480px]:mb-[20px]">
             Ask a Query
           </h2>
           <form

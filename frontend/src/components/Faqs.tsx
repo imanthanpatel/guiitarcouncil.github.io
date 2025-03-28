@@ -68,7 +68,7 @@ const faqs: FAQItem[] = [
   {
     question: "How can I contact the GUIITAR Council for more information?",
     answer:
-      "You can reach us via:\n- Email: guiitar@gsfcuniversity.ac.in\n- Phone: 9313262712 (10:00 AM to 05:00 PM)\n- Visit: 2nd Floor, Event Room, Anviksha, GUIITAR Council, GSFC University, P.O. Fertilizernagar, Vadodara – 391750, Gujarat, INDIA",
+      "You can reach us via:\n- Email: guiitar@gsfcuniversity.ac.in\n- Phone: 9313262712 (10:00 AM to 05:00 PM)\n- Visit: 2nd Floor, Event Room, Anviksha, GUIITAR Council, GSFC University, P.O. Fertilizernagar, Vadodara - 391750, Gujarat, INDIA",
   },
   {
     question:
@@ -87,7 +87,7 @@ const FAQ: React.FC = () => {
 
   return (
     <div className="bg-secondary py-[50px]">
-      <div className="text-center">
+      <div id= "faq"className="text-center">
         <p className="text-[50px] text-[#2b5482] max-[768px]:text-[40px] max-[480px]:text-[30px]">
           FAQs
         </p>

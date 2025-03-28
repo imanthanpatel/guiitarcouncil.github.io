@@ -82,7 +82,10 @@ const Workshops: React.FC = () => {
           </div>
         </div>
       </div>
-
+      {/* Events */}
+      <h1 id = "events"className="main-heading text-[3rem] font text-[#2b5482] mb-[20px] text-center pt-[50px] max-[768px]:text-[2.5rem] max-[480px]:text-[2rem]">
+        Explore Our Workshops
+      </h1>
     </div>
   );
 };

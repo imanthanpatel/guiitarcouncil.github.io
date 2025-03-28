@@ -1,6 +1,5 @@
-// src/Components/Footer.tsx
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import Newsletter from "./Newsletter";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -14,15 +13,23 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
-
 const Footer: React.FC = () => {
+  const location = useLocation();
+
+  const handleLinkClick = (to: string) => {
+    const currentPath = location.pathname; // Current page (e.g., "/workshop")
+    const targetPath = to.split("#")[0] || "/";
+
+    // Reload only if the base path changes
+    if (currentPath !== targetPath) {
+      window.location.href = to; // Forces reload and navigation
+    }
+  };
   return (
     <>
       <Newsletter />
       <footer className="bg-[#0d0c0c] text-secondary py-10 px-5 w-full">
-        {/* Footer Container */}
         <div className="footer-container flex flex-col md:flex-row justify-between border-b border-white pb-14 mb-10 max-w-7xl mx-auto">
-          {/* Section 1: Address */}
           <div className="footer-section px-5 flex-1 mb-8 md:mb-0">
             <p className="text-white text-[20px] mb-6">
               © 2025 GUIITAR Council
@@ -35,16 +42,14 @@ const Footer: React.FC = () => {
             <p className="text-white text-[20px]">India</p>
           </div>
 
-          {/* Divider */}
           <div className="hidden md:block w-[1px] bg-white my-[-10px] mx-5" />
 
-          {/* Section 2: Links */}
           <div className="footer-section px-5 flex-1 mb-8 md:mb-0">
             <ul className="list-none p-0 m-0">
               <li className="mb-2">
                 <HashLink
                   smooth
-                  to="/programs#phe-hea"
+                  to="/workshop#events"
                   className="text-white text-[20px] hover:text-gray-500"
                 >
                   Previous Events
@@ -82,40 +87,39 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Section 3: Links */}
           <div className="footer-section px-5 flex-1 mb-8 md:mb-0">
             <ul className="list-none p-0 m-0">
-              <li className="mb-2">
-                <HashLink
-                  smooth
+             <li className="mb-2">
+                <Link
                   to="/funding"
+                  onClick={() => handleLinkClick("/funding")}
                   className="text-white text-[20px] hover:text-gray-500"
                 >
-                  Apply for Funding
-                </HashLink>
+                  Apply for funding
+                </Link>
               </li>
               <li className="mb-2">
-                <HashLink
-                  smooth
-                  to="/programs#programs-achievements"
+                <Link
+                  to="/droneworkshop"
+                  onClick={() => handleLinkClick("/droneworkshop")}
                   className="text-white text-[20px] hover:text-gray-500"
                 >
                   Drone Workshop
-                </HashLink>
+                </Link>
               </li>
               <li className="mb-2">
-                <HashLink
-                  smooth
-                  to="/programs#programs-achievements"
+                <Link
+                  to="/3dprintingworkshop"
+                  onClick={() => handleLinkClick("/3dprintingworkshop")}
                   className="text-white text-[20px] hover:text-gray-500"
                 >
                   3D Printing Workshop
-                </HashLink>
+                </Link>
               </li>
               <li className="mb-2">
                 <HashLink
                   smooth
-                  to="/"
+                  to="/#faq"
                   className="text-white text-[20px] hover:text-gray-500"
                 >
                   FAQs
@@ -124,16 +128,16 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Section 4: Links */}
           <div className="footer-section px-5 flex-1 mb-8 md:mb-0">
             <ul className="list-none p-0 m-0">
-              <li className="mb-2">
-                <Link
-                  to="/about"
+            <li className="mb-2">
+            <HashLink
+                  smooth
+                  to="/funding#achievement"
                   className="text-white text-[20px] hover:text-gray-500"
                 >
-                  About Us
-                </Link>
+                  Funding Secured
+                </HashLink>
               </li>
               <li className="mb-2">
                 <HashLink
@@ -147,6 +151,7 @@ const Footer: React.FC = () => {
               <li className="mb-2">
                 <Link
                   to="/contact"
+                  onClick={() => handleLinkClick("/contact")}
                   className="text-white text-[20px] hover:text-gray-500"
                 >
                   Contact
@@ -154,7 +159,8 @@ const Footer: React.FC = () => {
               </li>
               <li className="mb-2">
                 <Link
-                  to="/"
+                  to="/Login"
+                  onClick={() => handleLinkClick("/login")}
                   className="text-white text-[20px] hover:text-gray-500"
                 >
                   Login
@@ -164,7 +170,6 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* Footer Bottom */}
         <div className="footer-bottom flex flex-col md:flex-row justify-between items-center mt-3 max-w-7xl mx-auto px-5">
           <img
             src="https://res.cloudinary.com/dopcjxehj/image/upload/v1743089168/white_logo_trewbg.png"
@@ -217,21 +222,20 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* All Rights Reserved Section */}
         <div className="allrsd pt-8 flex flex-col md:flex-row justify-center items-center gap-4 md:gap-48 px-5">
           <p className="text-white text-[18px] md:text-[18px] text-center">
             All rights Reserved © 2025
           </p>
           <HashLink
             smooth
-            to="/terms"
+            to="/termsandconditions"
             className="text-white text-[18px] hover:text-gray-500"
           >
             Terms & Conditions
           </HashLink>
           <HashLink
             smooth
-            to="/privacy"
+            to="/privacypolicy"
             className="text-white text-[18px] hover:text-gray-500"
           >
             Privacy Policy

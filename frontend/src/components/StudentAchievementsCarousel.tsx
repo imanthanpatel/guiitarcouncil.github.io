@@ -403,7 +403,7 @@ const StudentAchievementsCarousel: React.FC = () => {
   // const currentProject = projects[currentIndex];
 
   return (
-    <div className="relative w-full max-w-5xl mx-auto py-8 px-2 sm:px-4 lg:py-12">
+    <div id="achievement"className="relative w-full max-w-5xl mx-auto py-8 px-2 sm:px-4 lg:py-12">
       {/* Wrapper for Carousel and Buttons */}
       <div className="relative flex items-center">
         {/* Left Navigation Button (Hidden on small screens) */}

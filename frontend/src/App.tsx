@@ -1,7 +1,12 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
-import Navbar from "./components/Navbar"; 
-import Footer from "./components/Footer"; 
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import Carousel from "./components/Carousel";
 import Mission from "./components/Mission";
 import BuildFuture from "./components/BuildFuture";
@@ -12,7 +17,12 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Funding from "./components/Funding";
 import Workshops from "./components/Workshops";
-// import Notfound from "./components/Notfound";
+import TermsAndConditions from "./components/TermsAndConditions";
+import PrivacyPolicy from "./components/PrivacyPolicy";
+import NotFoundPage from "./components/NotFoundPage";
+import ThreeDPrintingWorkshop from "./components/ThreeDPrintingWorkshop";
+
+import DroneWorkshop from "./components/DroneWorkshop";
 
 const AppContent: React.FC = () => {
   const location = useLocation();
@@ -26,13 +36,17 @@ const AppContent: React.FC = () => {
           element={
             <>
               <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
-              <div className={`min-h-screen transition-all duration-300 ${isOpen ? "pt-[300px]" : "pt-[80px]"} md:pt-[80px]`}>
+              <div
+                className={`min-h-screen transition-all duration-300 ${
+                  isOpen ? "pt-[300px]" : "pt-[80px]"
+                } md:pt-[80px]`}
+              >
                 <Carousel />
-                <Mission/>
-                <BuildFuture/>
-                <Scalar/>
-                <Associations/>
-                <Faqs/>
+                <Mission />
+                <BuildFuture />
+                <Scalar />
+                <Associations />
+                <Faqs />
                 <Footer />
               </div>
             </>
@@ -43,9 +57,12 @@ const AppContent: React.FC = () => {
           element={
             <>
               <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
-              <div className={`min-h-screen bg-gray-50 transition-all duration-300 ${isOpen ? "pt-[300px]" : "pt-[80px]"} md:pt-[80px]`}>
-                <About/>
-                {/* <Footer /> */}
+              <div
+                className={`min-h-screen bg-gray-50 transition-all duration-300 ${
+                  isOpen ? "pt-[300px]" : "pt-[80px]"
+                } md:pt-[80px]`}
+              >
+                <About />
               </div>
             </>
           }
@@ -55,8 +72,12 @@ const AppContent: React.FC = () => {
           element={
             <>
               <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
-              <div className={`min-h-screen bg-gray-50 transition-all duration-300 ${isOpen ? "pt-[300px]" : "pt-[80px]"} md:pt-[80px]`}>
-              <Funding/>
+              <div
+                className={`min-h-screen bg-gray-50 transition-all duration-300 ${
+                  isOpen ? "pt-[300px]" : "pt-[80px]"
+                } md:pt-[80px]`}
+              >
+                <Funding />
                 <Footer />
               </div>
             </>
@@ -67,8 +88,12 @@ const AppContent: React.FC = () => {
           element={
             <>
               <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
-              <div className={`min-h-screen bg-gray-50 transition-all duration-300 ${isOpen ? "pt-[300px]" : "pt-[80px]"} md:pt-[80px]`}>
-                <Workshops/>
+              <div
+                className={`min-h-screen bg-gray-50 transition-all duration-300 ${
+                  isOpen ? "pt-[300px]" : "pt-[80px]"
+                } md:pt-[80px]`}
+              >
+                <Workshops />
                 <Footer />
               </div>
             </>
@@ -79,8 +104,76 @@ const AppContent: React.FC = () => {
           element={
             <>
               <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
-              <div className={`min-h-screen bg-gray-50 transition-all duration-300 ${isOpen ? "pt-[300px]" : "pt-[80px]"} md:pt-[80px]`}>
-                <Contact/>
+              <div
+                className={`min-h-screen bg-gray-50 transition-all duration-300 ${
+                  isOpen ? "pt-[300px]" : "pt-[80px]"
+                } md:pt-[80px]`}
+              >
+                <Contact />
+              </div>
+            </>
+          }
+        />
+        <Route
+          path="/termsandconditions"
+          element={
+            <>
+              <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
+              <div
+                className={`min-h-screen bg-gray-50 transition-all duration-300 ${
+                  isOpen ? "pt-[300px]" : "pt-[80px]"
+                } md:pt-[80px]`}
+              >
+                <TermsAndConditions />
+                <Footer />
+              </div>
+            </>
+          }
+        />
+        <Route
+          path="/privacypolicy"
+          element={
+            <>
+              <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
+              <div
+                className={`min-h-screen bg-gray-50 transition-all duration-300 ${
+                  isOpen ? "pt-[300px]" : "pt-[80px]"
+                } md:pt-[80px]`}
+              >
+                <PrivacyPolicy />
+                <Footer />
+              </div>
+            </>
+          }
+        />
+        <Route
+          path="/3dprintingworkshop"
+          element={
+            <>
+              <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
+              <div
+                className={`min-h-screen bg-gray-50 transition-all duration-300 ${
+                  isOpen ? "pt-[300px]" : "pt-[80px]"
+                } md:pt-[80px]`}
+              >
+                <ThreeDPrintingWorkshop/>
+                <Footer />
+              </div>
+            </>
+          }
+        />
+        <Route
+          path="/droneworkshop"
+          element={
+            <>
+              <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
+              <div
+                className={`min-h-screen bg-gray-50 transition-all duration-300 ${
+                  isOpen ? "pt-[300px]" : "pt-[80px]"
+                } md:pt-[80px]`}
+              >
+                <DroneWorkshop/>
+                <Footer />
               </div>
             </>
           }
@@ -90,16 +183,18 @@ const AppContent: React.FC = () => {
           element={
             <>
               <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
-              <div className={`min-h-screen bg-gray-50 transition-all duration-300 ${isOpen ? "pt-[300px]" : "pt-[80px]"} md:pt-[80px]`}>
-                <h1 className="text-3xl text-center pt-20">
-                  Login Page
-                </h1>
+              <div
+                className={`min-h-screen bg-gray-50 transition-all duration-300 ${
+                  isOpen ? "pt-[300px]" : "pt-[80px]"
+                } md:pt-[80px]`}
+              >
+                <h1 className="text-3xl font-bold text-center pt-20">Login Portal is in development!</h1>
                 <Footer />
               </div>
             </>
           }
         />
-        {/* <Route path="*" element={<Notfound />} /> */}
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </>
   );
