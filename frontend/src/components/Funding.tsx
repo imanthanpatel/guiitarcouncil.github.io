@@ -13,7 +13,7 @@ const Funding: React.FC = () => {
             backgroundPosition: "center",
           }}
         />
-        <div className="absolute top-[35%] left-[15%] -translate-x-[30%] -translate-y-1/2 text-secondary text-[60px] font max-[768px]:text-[40px] max-[480px]:text-[30px] text-white">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-secondary text-[60px] font max-[768px]:text-[40px] max-[480px]:text-[30px] text-white">
           Funding Opportunities
         </div>
       </div>
@@ -170,10 +170,13 @@ const Funding: React.FC = () => {
           </div>
         </div>
       </div>
-      <h1 id ="#achievement"className="main-heading text-[3rem] font text-[#2b5482] mb-[20px] text-center pt-[50px] max-[768px]:text-[2.5rem] max-[480px]:text-[2rem]">
+      <h1
+        id="#achievement"
+        className="main-heading text-[3rem] font text-[#2b5482] mb-[20px] text-center pt-[50px] max-[768px]:text-[2.5rem] max-[480px]:text-[2rem]"
+      >
         Startups & Projects Funded
       </h1>
-      <StudentAchievementsCarousel/>
+      <StudentAchievementsCarousel />
     </>
   );
 };

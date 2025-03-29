@@ -17,20 +17,20 @@ const Footer: React.FC = () => {
   const location = useLocation();
 
   const handleLinkClick = (to: string) => {
-    const currentPath = location.pathname; // Current page (e.g., "/workshop")
+    const currentPath = location.pathname;
     const targetPath = to.split("#")[0] || "/";
 
-    // Reload only if the base path changes
     if (currentPath !== targetPath) {
-      window.location.href = to; // Forces reload and navigation
+      window.location.href = to;
     }
   };
+
   return (
     <>
       <Newsletter />
       <footer className="bg-[#0d0c0c] text-secondary py-10 px-5 w-full">
-        <div className="footer-container flex flex-col md:flex-row justify-between border-b border-white pb-14 mb-10 max-w-7xl mx-auto">
-          <div className="footer-section px-5 flex-1 mb-8 md:mb-0">
+        <div className="footer-container flex flex-col items-center text-center md:flex-row md:text-left md:items-start justify-between border-b border-white pb-14 mb-10 max-w-7xl mx-auto">
+          <div className="footer-section px-5 flex-1 mb-8 md:mb-0 text-center md:text-left">
             <p className="text-white text-[20px] mb-6">
               © 2025 GUIITAR Council
             </p>
@@ -44,7 +44,7 @@ const Footer: React.FC = () => {
 
           <div className="hidden md:block w-[1px] bg-white my-[-10px] mx-5" />
 
-          <div className="footer-section px-5 flex-1 mb-8 md:mb-0">
+          <div className="footer-section px-5 flex-1 mb-8 md:mb-0 text-center md:text-left">
             <ul className="list-none p-0 m-0">
               <li className="mb-2">
                 <HashLink
@@ -87,9 +87,9 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          <div className="footer-section px-5 flex-1 mb-8 md:mb-0">
+          <div className="footer-section px-5 flex-1 mb-8 md:mb-0 text-center md:text-left">
             <ul className="list-none p-0 m-0">
-             <li className="mb-2">
+              <li className="mb-2">
                 <Link
                   to="/funding"
                   onClick={() => handleLinkClick("/funding")}
@@ -128,10 +128,10 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          <div className="footer-section px-5 flex-1 mb-8 md:mb-0">
+          <div className="footer-section px-5 flex-1 mb-8 md:mb-0 text-center md:text-left">
             <ul className="list-none p-0 m-0">
-            <li className="mb-2">
-            <HashLink
+              <li className="mb-2">
+                <HashLink
                   smooth
                   to="/funding#achievement"
                   className="text-white text-[20px] hover:text-gray-500"
@@ -170,7 +170,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="footer-bottom flex flex-col md:flex-row justify-between items-center mt-3 max-w-7xl mx-auto px-5">
+        <div className="footer-bottom flex flex-col items-center text-center md:flex-row md:justify-between mt-3 max-w-7xl mx-auto px-5">
           <img
             src="https://res.cloudinary.com/dopcjxehj/image/upload/v1743089168/white_logo_trewbg.png"
             alt="GUIITAR Council Logo"

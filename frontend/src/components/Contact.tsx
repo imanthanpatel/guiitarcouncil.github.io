@@ -17,7 +17,7 @@ const Contact: React.FC = () => {
 
   return (
     <div className="font">
-      <div className="relative w-full h-[60vh] overflow-hidden bg-primary">
+ <div className="relative w-full h-[60vh] overflow-hidden bg-primary">
         <div
           className="absolute inset-0 bg-primary bg-opacity-80"
           style={{
@@ -26,7 +26,7 @@ const Contact: React.FC = () => {
             backgroundPosition: "center",
           }}
         />
-        <div className="absolute top-[35%] left-[15%] -translate-x-[30%] -translate-y-1/2 text-secondary text-[60px] font max-[768px]:text-[40px] max-[480px]:text-[30px] text-white">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-secondary text-[60px] font max-[768px]:text-[40px] max-[480px]:text-[30px] text-white">
           Contact Us
         </div>
       </div>
