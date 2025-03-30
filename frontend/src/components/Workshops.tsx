@@ -1,5 +1,6 @@
 import React from "react";
 import "@google/model-viewer";
+import EventGallery from "./EventGallery";
 const Workshops: React.FC = () => {
   return (
     <div className="ac flex flex-col items-center gap-3 ">
@@ -93,8 +94,9 @@ const Workshops: React.FC = () => {
         id="events"
         className="main-heading text-[3rem] font text-[#2b5482] mb-[20px] text-center pt-[50px] max-[768px]:text-[2.5rem] max-[480px]:text-[2rem]"
       >
-        Events
+        Event Gallery
       </h1>
+      <EventGallery/>
     </div>
   );
 };
