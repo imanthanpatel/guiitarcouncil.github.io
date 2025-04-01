@@ -123,7 +123,7 @@ const DroneEvents: React.FC = () => {
 
   return (
     <>
-      <div className="min-h-screen bg-gray-900 text-white relative overflow-hidden">
+      <div className="min-h-screenoverflow-hidden">
         {/* Full-Width Static Image Section */}
         <section className="w-full h-[60vh] relative z-1">
           <img
@@ -149,7 +149,7 @@ const DroneEvents: React.FC = () => {
               Upcoming Drone Events
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-gray-700 rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform duration-300 pointer-events-auto">
+              <div className="bg-gray-200 rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform duration-300 pointer-events-auto">
                 <div className="relative">
                   <img
                     src="https://res.cloudinary.com/dopcjxehj/image/upload/v1743409033/1736579741439_lmri3r.jpg"
@@ -160,10 +160,10 @@ const DroneEvents: React.FC = () => {
                     Feb 6-8, 2025
                   </div>
                 </div>
-                <h3 className="text-2xl font-semibold mt-4 text-white">
+                <h3 className="text-2xl font-semibold mt-4 text-[#2b5482] ">
                   Drone Technician Workshop
                 </h3>
-                <p className="mt-2 text-gray-300">
+                <p className="mt-2 text-black">
                   Master the art of drone assembly, maintenance, and operation
                   in this hands-on workshop.
                 </p>
@@ -171,14 +171,14 @@ const DroneEvents: React.FC = () => {
                   Fees: ₹3,540 (₹3,000 + 18% GST)
                 </p>
                 <a
-                  href="#register"
+                  href="/"
                   className="mt-6 block text-center bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition-colors pointer-events-auto"
                 >
                   Register Now
                 </a>
               </div>
 
-              <div className="bg-gray-700 rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform duration-300 pointer-events-auto">
+              <div className="bg-gray-200 rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform duration-300 pointer-events-auto">
                 <div className="relative">
                   <img
                     src="https://res.cloudinary.com/dopcjxehj/image/upload/v1743409033/1736579741439_lmri3r.jpg"
@@ -189,10 +189,10 @@ const DroneEvents: React.FC = () => {
                     Mar 15, 2025
                   </div>
                 </div>
-                <h3 className="text-2xl font-semibold mt-4 text-white">
+                <h3 className="text-2xl font-semibold mt-4 text-[#2b5482]">
                   Drone Racing Championship
                 </h3>
-                <p className="mt-2 text-gray-300">
+                <p className="mt-2 text-black">
                   Test your skills in a high-speed drone race through
                   challenging obstacle courses.
                 </p>
@@ -200,14 +200,14 @@ const DroneEvents: React.FC = () => {
                   Entry Fee: ₹1,500
                 </p>
                 <a
-                  href="#register"
+                  href="/"
                   className="mt-6 block text-center bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition-colors pointer-events-auto"
                 >
                   Join the Race
                 </a>
               </div>
 
-              <div className="bg-gray-700 rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform duration-300 pointer-events-auto">
+              <div className="bg-gray-200 rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform duration-300 pointer-events-auto">
                 <div className="relative">
                   <img
                     src="https://res.cloudinary.com/dopcjxehj/image/upload/v1743409033/1736579741439_lmri3r.jpg"
@@ -218,10 +218,10 @@ const DroneEvents: React.FC = () => {
                     Apr 10, 2025
                   </div>
                 </div>
-                <h3 className="text-2xl font-semibold mt-4 text-white">
+                <h3 className="text-2xl font-semibold mt-4 text-[#2b5482]">
                   Drone Innovation Hackathon
                 </h3>
-                <p className="mt-2 text-gray-300">
+                <p className="mt-2 text-black">
                   Innovate and build cutting-edge drone solutions in this
                   48-hour hackathon.
                 </p>
@@ -229,7 +229,7 @@ const DroneEvents: React.FC = () => {
                   Team Fee: ₹5,000
                 </p>
                 <a
-                  href="#register"
+                  href="/"
                   className="mt-6 block text-center bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition-colors pointer-events-auto"
                 >
                   Apply Now
