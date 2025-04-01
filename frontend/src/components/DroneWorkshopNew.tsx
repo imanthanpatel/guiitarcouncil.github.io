@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
-import DroneWorkshopContent from "./DroneWorkshopContent";
 
 const DroneOverlay: React.FC<{
   position: { x: number; y: number };
@@ -30,7 +29,7 @@ const DroneOverlay: React.FC<{
             opacity: (index + 1) / trail.length,
             transform: `scale(${(index + 1) / trail.length})`,
             transition: "all 0.2s ease-out",
-            zIndex: 9998,
+            zIndex: 9998, // Just below drone
           }}
         />
       ))}
@@ -46,7 +45,7 @@ const DroneOverlay: React.FC<{
             scale(${1 + Math.min(speed / 100, 0.5)})
           `,
           transition: "transform 0.1s ease-out",
-          zIndex: 9999,
+          zIndex: 9999, // Very high to overlay everything
         }}
       >
         <svg
@@ -124,35 +123,42 @@ const DroneEvents: React.FC = () => {
   return (
     <>
       <div className="min-h-screen bg-gray-900 text-white relative overflow-hidden">
-        {/* Full-Width Static Image Section */}
-        <section className="w-full h-[60vh] relative z-1">
-          <img
-            src="https://res.cloudinary.com/dopcjxehj/image/upload/v1743095736/drone_vzlzxn.jpg"
-            alt="Drone Workshop Banner"
-            className="w-full h-full object-cover"
-          />
-        </section>
-
         {/* Starry Background */}
-        <div className="absolute inset-0 bg pointer-events-none z-0"></div>
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-30 pointer-events-none z-0"></div>
 
-        {/* Drone Workshop Content */}
-        <DroneWorkshopContent />
+        {/* Hero Section */}
+        <header className="relative py-20 z-1 pointer-events-auto">
+          <div className="container mx-auto px-6 text-center">
+            <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-orange-500 animate-fade-in">
+              Explore the Future of Drones
+            </h1>
+            <p className="mt-4 text-lg md:text-2xl text-gray-300">
+              Join our exclusive drone events, workshops, and competitions to
+              soar into innovation!
+            </p>
+            <a
+              href="#events"
+              className="mt-8 inline-block bg-gradient-to-r from-blue-500 to-orange-500 text-white px-8 py-3 rounded-full text-lg font-semibold hover:from-blue-600 hover:to-orange-600 transition-all duration-300 pointer-events-auto"
+            >
+              Discover Events
+            </a>
+          </div>
+        </header>
 
         {/* Events Section */}
         <section
           id="events"
-          className="py-20 bg-white relative z-1 pointer-events-auto"
+          className="py-20 bg-gray-800/50 relative z-1 pointer-events-auto"
         >
           <div className="container mx-auto px-6">
-            <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-[#2b5482]">
+            <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-white">
               Upcoming Drone Events
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-gray-700 rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform duration-300 pointer-events-auto">
                 <div className="relative">
                   <img
-                    src="https://res.cloudinary.com/dopcjxehj/image/upload/v1743409033/1736579741439_lmri3r.jpg"
+                    src="https://via.placeholder.com/400x200?text=Drone+Workshop"
                     alt="Drone Workshop"
                     className="w-full h-48 object-cover rounded-t-lg"
                   />
@@ -181,7 +187,7 @@ const DroneEvents: React.FC = () => {
               <div className="bg-gray-700 rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform duration-300 pointer-events-auto">
                 <div className="relative">
                   <img
-                    src="https://res.cloudinary.com/dopcjxehj/image/upload/v1743409033/1736579741439_lmri3r.jpg"
+                    src="https://via.placeholder.com/400x200?text=Drone+Racing"
                     alt="Drone Racing"
                     className="w-full h-48 object-cover rounded-t-lg"
                   />
@@ -210,7 +216,7 @@ const DroneEvents: React.FC = () => {
               <div className="bg-gray-700 rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform duration-300 pointer-events-auto">
                 <div className="relative">
                   <img
-                    src="https://res.cloudinary.com/dopcjxehj/image/upload/v1743409033/1736579741439_lmri3r.jpg"
+                    src="https://via.placeholder.com/400x200?text=Drone+Innovation"
                     alt="Drone Innovation"
                     className="w-full h-48 object-cover rounded-t-lg"
                   />
@@ -241,11 +247,11 @@ const DroneEvents: React.FC = () => {
 
         <style>{`
           .drone-animation {
-            position: fixed;
+            position: fixed; /* Changed to fixed for portal */
           }
 
           .animate-drone {
-            animation: spin 1.0s infinite linear;
+            animation: spin 0.8s infinite linear;
           }
 
           @keyframes spin {
