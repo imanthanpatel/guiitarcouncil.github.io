@@ -58,6 +58,7 @@ const DroneOverlay: React.FC<{
           viewBox="0 0 64 64"
           xmlns="http://www.w3.org/2000/svg"
         >
+          {/* SVG content remains the same */}
           <g>
             <circle cx="32" cy="32" r="12" fill="none" strokeWidth="3" />
             <line x1="20" y1="20" x2="12" y2="12" strokeWidth="2" />
@@ -87,44 +88,64 @@ const DroneOverlay: React.FC<{
 };
 
 const DroneEvents: React.FC = () => {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
-  const [lastPosition, setLastPosition] = useState({ x: 0, y: 0 });
-  const [speed, setSpeed] = useState(0);
+  const [position, setPosition] = useState({ x: 100, y: 100 });
+  const [lastPosition, setLastPosition] = useState({ x: 100, y: 100 });
+  const [speed] = useState(2); // Constant slow speed
   const [isClicked, setIsClicked] = useState(false);
   const [trail, setTrail] = useState<{ x: number; y: number }[]>([]);
+  const [direction, setDirection] = useState({ dx: 1, dy: 1 });
 
   useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      const newPos = { x: e.clientX, y: e.clientY };
-      const deltaX = newPos.x - lastPosition.x;
-      const deltaY = newPos.y - lastPosition.y;
-      const newSpeed = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+    const animateDrone = () => {
+      setPosition((prev) => {
+        let newX = prev.x + direction.dx * speed;
+        let newY = prev.y + direction.dy * speed;
+        let newDx = direction.dx;
+        let newDy = direction.dy;
 
-      setPosition(newPos);
-      setLastPosition(newPos);
-      setSpeed(newSpeed);
+        // Bounce off edges
+        const windowWidth = window.innerWidth;
+        const windowHeight = window.innerHeight;
 
-      setTrail((prev) => [...prev.slice(-10), newPos]);
+        if (newX < 64 || newX > windowWidth - 64) {
+          newDx = -direction.dx;
+          newX = prev.x + newDx * speed;
+        }
+        if (newY < 64 || newY > windowHeight - 64) {
+          newDy = -direction.dy;
+          newY = prev.y + newDy * speed;
+        }
+
+        setDirection({ dx: newDx, dy: newDy });
+        setLastPosition(prev);
+        setTrail((prevTrail) => [
+          ...prevTrail.slice(-10),
+          { x: newX, y: newY },
+        ]);
+
+        return { x: newX, y: newY };
+      });
     };
+
+    const interval = setInterval(animateDrone, 16); // ~60fps
 
     const handleClick = () => {
       setIsClicked(true);
       setTimeout(() => setIsClicked(false), 200);
     };
 
-    window.addEventListener("mousemove", handleMouseMove);
     window.addEventListener("click", handleClick);
 
     return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
+      clearInterval(interval);
       window.removeEventListener("click", handleClick);
     };
-  }, [lastPosition]);
+  }, [direction, speed]);
 
   return (
     <>
-      <div className="min-h-screenoverflow-hidden">
-        {/* Full-Width Static Image Section */}
+      <div className="min-h-screen overflow-hidden">
+        {/* Rest of your JSX remains the same */}
         <section className="w-full h-[60vh] relative z-1">
           <img
             src="https://res.cloudinary.com/dopcjxehj/image/upload/v1743095736/drone_vzlzxn.jpg"
@@ -133,17 +154,14 @@ const DroneEvents: React.FC = () => {
           />
         </section>
 
-        {/* Starry Background */}
         <div className="absolute inset-0 bg pointer-events-none z-0"></div>
-
-        {/* Drone Workshop Content */}
         <DroneWorkshopContent />
 
-        {/* Events Section */}
         <section
           id="events"
           className="py-20 bg-white relative z-1 pointer-events-auto"
         >
+          {/* Events section content remains the same */}
           <div className="container mx-auto px-6">
             <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-[#2b5482]">
               Upcoming Drone Events
@@ -249,12 +267,8 @@ const DroneEvents: React.FC = () => {
           }
 
           @keyframes spin {
-            0% {
-              transform: rotate(0deg);
-            }
-            100% {
-              transform: rotate(360deg);
-            }
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
           }
 
           .animate-fade-in {
@@ -262,19 +276,12 @@ const DroneEvents: React.FC = () => {
           }
 
           @keyframes fadeIn {
-            0% {
-              opacity: 0;
-              transform: translateY(20px);
-            }
-            100% {
-              opacity: 1;
-              transform: translateY(0);
-            }
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
           }
         `}</style>
       </div>
 
-      {/* Drone Overlay Portal */}
       <DroneOverlay
         position={position}
         lastPosition={lastPosition}
